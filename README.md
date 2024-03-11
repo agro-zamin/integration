@@ -10,19 +10,19 @@ Ushbu kengaytmani o'rnatishning afzal usuli - [composer](http://getcomposer.org/
 O'rnatish uchun quyidagi buyruqni ishga tushiring:
 
 ```
-php composer require --prefer-dist agrozamin/integrations "1.0.0"
+php composer require --prefer-dist agro-zamin/integration "1.0.0"
 ```
 
 Agar Siz composer global o'rnatgan bo'lsangiz, quyidagi buyruqni ishga tushiring:
 
 ```
-composer require --prefer-dist agrozamin/integrations "1.0.0"
+composer require --prefer-dist agro-zamin/integration "1.0.0"
 ```
 
 Yoki quyidagi qatorni `composer.json` faylga qo'shing:
 
 ```
-"agrozamin/integrations": "^1.0.0"
+"agro-zamin/integration": "^1.0.0"
 ```
 
 ### Sinf (class)-lar tavsifi
