@@ -1,6 +1,6 @@
 <?php
 
-namespace AgroZamin\Integrations\Helper;
+namespace AgroZamin\Integration\Helper;
 
 class Json {
     /**

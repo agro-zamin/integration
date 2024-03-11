@@ -1,6 +1,6 @@
 <?php
 
-namespace AgroZamin\Integrations;
+namespace AgroZamin\Integration;
 
 abstract class RequestModel {
 

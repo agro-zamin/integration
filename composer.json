@@ -1,5 +1,5 @@
 {
-  "name": "agrozamin/integrations",
+  "name": "agro-zamin/integration",
   "description": "Loyihalar-aro \"Agrozamin\" tizimlaridan foydalanishga mo'ljallangan kutubxonalar uchun asos",
   "type": "library",
   "keywords": [],
@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AgroZamin\\Integrations\\": "src"
+      "AgroZamin\\Integration\\": "src"
     }
   }
 }

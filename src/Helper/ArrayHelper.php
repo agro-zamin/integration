@@ -1,6 +1,6 @@
 <?php
 
-namespace AgroZamin\Integrations\Helper;
+namespace AgroZamin\Integration\Helper;
 
 class ArrayHelper {
     public static function isAssociative($array, $allStrings = true): bool {

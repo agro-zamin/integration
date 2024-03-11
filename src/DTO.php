@@ -1,8 +1,8 @@
 <?php
 
-namespace AgroZamin\Integrations;
+namespace AgroZamin\Integration;
 
-use AgroZamin\Integrations\Helper\ArrayHelper;
+use AgroZamin\Integration\Helper\ArrayHelper;
 use ReflectionClass;
 use ReflectionProperty;
 use function is_null;

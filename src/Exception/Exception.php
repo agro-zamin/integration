@@ -1,6 +1,6 @@
 <?php
 
-namespace AgroZamin\Integrations\Exception;
+namespace AgroZamin\Integration\Exception;
 
 class Exception extends \Exception {
     /**

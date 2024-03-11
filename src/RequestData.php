@@ -1,6 +1,6 @@
 <?php
 
-namespace AgroZamin\Integrations;
+namespace AgroZamin\Integration;
 
 use Psr\Http\Message\ResponseInterface;
 use Throwable;

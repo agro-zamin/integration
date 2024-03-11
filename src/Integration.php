@@ -1,8 +1,8 @@
 <?php
 
-namespace AgroZamin\Integrations;
+namespace AgroZamin\Integration;
 
-use AgroZamin\Integrations\Helper\Json;
+use AgroZamin\Integration\Helper\Json;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
