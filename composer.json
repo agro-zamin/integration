@@ -1,0 +1,25 @@
+{
+  "name": "agrozamin/integrations",
+  "description": "Loyihalar-aro \"Agrozamin\" tizimlaridan foydalanishga mo'ljallangan kutubxonalar uchun asos",
+  "type": "library",
+  "keywords": [],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ibragimov Diyorbek",
+      "email": "uzdevid@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "psr/log": "3.0.0",
+    "guzzlehttp/guzzle": "^7.7",
+    "ramsey/uuid": "^4.7",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "AgroZamin\\Integrations\\": "src"
+    }
+  }
+}
