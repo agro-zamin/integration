@@ -151,7 +151,7 @@ class Example extends Integration {
 
 ----
 
-So'rov modelini yaratish. Misol tariqasida buyurtmalarni olish uchun `Post` so'rov modeli.
+So'rov modelini yaratish. Misol tariqasida buyurtmalarni olish uchun `GetOrder` so'rov modeli.
 
 ```php
 namespace App\Integration\Example\Request;
@@ -159,7 +159,7 @@ namespace App\Integration\Example\Request;
 use AgroZamin\Integrations\RequestModel;
 use App\Integration\Example\DTO\OrderDTO;
 
-class GetPost extends RequestModel {
+class GetOrder extends RequestModel {
     private array $_queryParams = [];
 
     /**
@@ -277,12 +277,17 @@ class ImageDTO extends DTO {
 Yuqoridagi na'munada ko'rsatilgan `Example` tizimidan bitta buyurtmani modelini olish.
 
 ```php
+use App\Integration\Example\Example;
+use App\Integration\Example\Request\GetOrder;
+use App\Integration\Example\DTO\OrderDTO;
+use GuzzleHttp\Client;
+
 $exampleService = new Example('ABC...', new Client());
 
 $orderId = 1872;
 
 /** @var OrderDTO $orderDTO */
-$orderDTO = $exampleService->requestModel((new GetPost())->byId($orderId))->sendRequest();
+$orderDTO = $exampleService->requestModel((new GetOrder())->byId($orderId))->sendRequest();
 
 // code
 ```
