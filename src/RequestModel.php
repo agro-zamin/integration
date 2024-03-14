@@ -17,9 +17,9 @@ abstract class RequestModel {
     /**
      * @param array $data
      *
-     * @return DTO
+     * @return DTO|array
      */
-    abstract public function buildDto(array $data): DTO;
+    abstract public function buildDto(array $data): DTO|array;
 
     /**
      * @return string
