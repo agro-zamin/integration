@@ -102,9 +102,19 @@ abstract class DTO {
      * @return array
      */
     protected function arrayableObject($className, $data): array {
-        return array_filter(array_map(function ($datum) use ($className) {
-            return $this->processDatum($className, $datum);
-        }, $data));
+        $objects = [];
+        foreach ($data as $datum) {
+            if (empty($datum)) continue;
+
+            if (ArrayHelper::isAssociative($datum)) {
+                $objects[] = $this->getInstance($className, $datum);
+            } else {
+                $objects = array_merge($objects, array_map(function ($item) use ($className) {
+                    return $this->getInstance($className, [$item]);
+                }, $datum));
+            }
+        }
+        return $objects;
     }
 
     /**
