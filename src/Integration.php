@@ -161,6 +161,10 @@ abstract class Integration {
 
         $body = $this->requestModel->body();
 
+        if ($body instanceof Payload) {
+            $body = $body->toArray();
+        }
+
         $requestOption = $this->requestModel->requestOption();
 
         if ($requestOption === 'json') {
