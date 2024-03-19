@@ -43,9 +43,9 @@ abstract class RequestModel {
     }
 
     /**
-     * @return array
+     * @return array|string
      */
-    public function body(): array {
+    public function body(): array|string {
         return [];
     }
 }
