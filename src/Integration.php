@@ -93,13 +93,13 @@ abstract class Integration {
     }
 
     /**
-     * @return array|DTO
+     * @return mixed
      * @throws Throwable
      * @throws GuzzleException
      * @throws ClientException
      * @throws ServerException
      */
-    public function sendRequest(): array|DTO {
+    public function sendRequest(): mixed {
         $options = $this->buildRequestOptions();
 
         $requestData = new RequestData();

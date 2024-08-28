@@ -3,7 +3,6 @@
 namespace AgroZamin\Integration;
 
 abstract class RequestModel {
-
     /**
      * @return string
      */
