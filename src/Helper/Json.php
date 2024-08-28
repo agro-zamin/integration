@@ -5,11 +5,11 @@ namespace AgroZamin\Integration\Helper;
 class Json {
     /**
      * @param string $json
-     * @param $isArray
+     * @param bool $isArray
      *
      * @return array|object
      */
-    public static function decode(string $json, $isArray = true): array|object {
+    public static function decode(string $json, bool $isArray = true): array|object {
         return json_decode($json, $isArray);
     }
 
