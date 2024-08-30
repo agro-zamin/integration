@@ -167,10 +167,6 @@ abstract class Integration {
 
         $requestOption = $this->requestModel->requestOption();
 
-        if ($requestOption === 'json') {
-            $body = Json::encode($body);
-        }
-
         $options[$requestOption] = $body;
 
         return $options;
