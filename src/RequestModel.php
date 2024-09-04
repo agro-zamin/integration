@@ -42,6 +42,13 @@ abstract class RequestModel {
     }
 
     /**
+     * @return array
+     */
+    public function queryPath(): array {
+        return [];
+    }
+
+    /**
      * @return Payload|array|string
      */
     public function body(): Payload|array|string {

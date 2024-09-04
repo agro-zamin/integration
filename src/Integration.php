@@ -112,7 +112,7 @@ abstract class Integration {
         $this->onBeforeRequest($requestData);
 
         try {
-            $response = $this->getClient()->request($this->requestModel->requestMethod(), $this->requestModel->url(), $options);
+            $response = $this->getClient()->request($this->requestModel->requestMethod(), $this->prepareUrl(), $options);
         } catch (ClientException|ServerException $exception) {
             $requestData->exception = $exception;
             $requestData->response = $exception->getResponse();
@@ -170,6 +170,22 @@ abstract class Integration {
         $options[$requestOption] = $body;
 
         return $options;
+    }
+
+    /**
+     * @return string
+     */
+    private function prepareUrl(): string {
+        $url = $this->requestModel->url();
+
+        if (empty($this->requestModel->queryPath())) {
+            return $url;
+        }
+
+        $pathNames = array_keys($this->requestModel->queryPath());
+        $pathValues = array_values($this->requestModel->queryPath());
+
+        return str_replace($pathNames, $pathValues, $url);
     }
 
     /**
