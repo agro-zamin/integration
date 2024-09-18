@@ -4,8 +4,12 @@ namespace AgroZamin\Integration;
 
 use Psr\Http\Message\ResponseInterface;
 use Throwable;
+use Yiisoft\Arrays\ArrayableInterface;
+use Yiisoft\Arrays\ArrayableTrait;
 
-class RequestData {
+class RequestData implements ArrayableInterface {
+    use ArrayableTrait;
+    
     public string $serviceName;
     public string $requestId;
     public RequestModel $requestModel;
