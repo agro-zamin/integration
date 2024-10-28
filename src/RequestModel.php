@@ -2,6 +2,8 @@
 
 namespace AgroZamin\Integration;
 
+use AgroZamin\Integration\Helper\Json;
+
 abstract class RequestModel {
     /**
      * @return string
@@ -53,5 +55,13 @@ abstract class RequestModel {
      */
     public function body(): Payload|array|string {
         return [];
+    }
+
+    /**
+     * @param mixed $content
+     * @return mixed
+     */
+    public function parseResponseBody(mixed $content): mixed {
+        return Json::decode($content);
     }
 }

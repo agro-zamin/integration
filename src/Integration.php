@@ -2,7 +2,6 @@
 
 namespace AgroZamin\Integration;
 
-use AgroZamin\Integration\Helper\Json;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
@@ -134,7 +133,7 @@ abstract class Integration {
 
         $this->clear();
 
-        $responseBody = Json::decode($response->getBody()->getContents());
+        $responseBody = $this->requestModel->parseBody($response->getBody()->getContents());
 
         return $this->requestModel->buildDto($responseBody);
     }
