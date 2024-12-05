@@ -12,7 +12,7 @@
   ],
   "require": {
     "php": ">=8.0",
-    "psr/log": "3.0.0",
+    "psr/log": "^3.0.0",
     "guzzlehttp/guzzle": "^7.7",
     "ramsey/uuid": "^4.7",
     "yiisoft/arrays": "^3.0.0",
