@@ -15,7 +15,7 @@ class RequestData implements ArrayableInterface {
     public RequestModel $requestModel;
     public array $options;
     public ResponseInterface|null $response = null;
-    public string|null $body;
+    public string|null $body = null;
     public Throwable $exception;
 
     /**
