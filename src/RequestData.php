@@ -15,6 +15,7 @@ class RequestData implements ArrayableInterface {
     public RequestModel $requestModel;
     public array $options;
     public ResponseInterface|null $response = null;
+    public string|null $body;
     public Throwable $exception;
 
     /**
@@ -44,7 +45,7 @@ class RequestData implements ArrayableInterface {
             $log['response'] = [
                 'status' => $this->response->getStatusCode(),
                 'headers' => $this->response->getHeaders(),
-                'body' => $this->response->getBody()->getContents(),
+                'body' => $this->body,
             ];
         }
 

@@ -128,12 +128,13 @@ abstract class Integration {
         }
 
         $requestData->response = $response;
+        $requestData->body = $response->getBody()->getContents();
 
         $this->onAfterRequest($requestData);
 
         $this->clear();
 
-        $responseBody = $this->requestModel->parseResponseBody($response->getBody()->getContents());
+        $responseBody = $this->requestModel->parseResponseBody($requestData->body);
 
         return $this->requestModel->buildDto($responseBody);
     }
