@@ -54,6 +54,15 @@ abstract class Integration {
     abstract protected function onThrow(RequestData $requestData): void;
 
     /**
+     * @param string $requestId
+     * @return $this
+     */
+    public function withRequestId(string $requestId): static {
+        $this->requestId = $requestId;
+        return $this;
+    }
+
+    /**
      * @param ResponseInterface $response
      * @param Throwable $exception
      *
