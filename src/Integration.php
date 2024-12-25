@@ -86,6 +86,11 @@ abstract class Integration {
      */
     public function requestModel(RequestModel $requestModel): static {
         $this->requestModel = $requestModel;
+
+        if ($this->requestModel instanceof WithIntegrationInterface) {
+            $this->requestModel = $this->requestModel->withIntegration($this);
+        }
+
         return $this;
     }
 
